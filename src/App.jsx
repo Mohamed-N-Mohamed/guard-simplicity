@@ -35,6 +35,40 @@ function App() {
         </div>
       </div>
 
+      <div className='about p-8'>
+        <h2 className='text-center text-2xl'>About us</h2>
+        <p className='text-lg'>
+          A leading security company in London, Guard Simplicity, are a private
+          security solutions provider serving the London and Greater London area
+          within the M25.
+        </p>
+        <p className='text-lg'>
+          Established in 2019, Guard Simplicity, has grown year on year and is
+          now recognised as one of the premier security companies in London.
+        </p>
+        <p className='text-lg'>
+          We follow our core objectives in every assignment we undertake,
+          outlining our values as a top security guard agency
+        </p>
+        <ul className='p-4'>
+          <li className='text-base'>
+            The Protection of Life (staff, clients, and customers)
+          </li>
+          <li className='text-base'>
+            The Prevention and Deterrence of Crime, Violence and Monetary Losses
+          </li>
+          <li className='text-base'>
+            The Creation of a Safe, Positive and Enriching Environment.
+          </li>
+        </ul>
+
+        <p className='text-lg'>
+          We pride ourselves on these core objectives, creating and delivering
+          bespoke solutions for private security in London, ensuring the safety
+          of those under our protection
+        </p>
+      </div>
+
       <div className='Our Services p-8'>
         <h2 className='text-center text-2xl'>Our Services</h2>
 

@@ -4,8 +4,8 @@ import { useEffect } from "react";
 const Footer = () => {
   function getFullYear() {
     const date = new Date();
-    const year = date.getFullYear();
-    return year;
+    const getFullYear = date.getFullYear();
+    return getFullYear;
   }
 
   const year = getFullYear();
