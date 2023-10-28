@@ -4,6 +4,7 @@ import { FaYoutube, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import { RiUserSearchLine } from "react-icons/ri";
 import { GrShieldSecurity } from "react-icons/gr";
 import { BsBookmarkCheck } from "react-icons/bs";
+import Footer from "./components/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -41,7 +42,7 @@ function App() {
           <div className='search border text-center '>
             <RiUserSearchLine size={32} className='mx-auto mt-2' />
             <h3 className='text-xl pt-4 pb-4'>Quick Search</h3>
-            <p className='text-sm pb-2'>
+            <p className='text-sm pb-2 2 px-4'>
               A search function that enables customers to find nearby
               experienced security guards based on location, availability, and
               specific skills or qualifications
@@ -51,7 +52,7 @@ function App() {
           <div className='profile border text-center'>
             <GrShieldSecurity size={32} className='mx-auto mt-2' />
             <h3 className='text-xl pt-4 pb-4'>Guard Profiles</h3>
-            <p className='text-sm pb-2'>
+            <p className='text-sm pb-2 2 px-4'>
               Detailed profiles for each security guard, including their
               experience, skills, certifications, and reviews from previous
               customers.
@@ -61,7 +62,7 @@ function App() {
           <div className='booking border text-center'>
             <BsBookmarkCheck size={32} className='mx-auto mt-2' />
             <h3 className='text-xl pt-4 pb-4'>Instant Booking</h3>
-            <p className='text-sm pb-2'>
+            <p className='text-sm pb-2 2 px-4'>
               A feature that allows customers to book a security guard for
               immediate or future dates and times with just a few clicks
             </p>
@@ -70,13 +71,14 @@ function App() {
           <div className='pricing border text-center'>
             <RiUserSearchLine size={32} className='mx-auto mt-2' />
             <h3 className='text-xl pt-4 pb-4'>Transparent Pricing</h3>
-            <p className='text-sm pb-2'>
+            <p className='text-sm pb-2 px-4'>
               Clear and transparent pricing structures, including options for
               hourly, daily, or event-based rates, with no hidden fees
             </p>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
