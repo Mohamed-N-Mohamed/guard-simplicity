@@ -6,3 +6,8 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
 }
+.header {
+  background: url("./assets/headerbanner.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+}
