@@ -5,6 +5,7 @@ import { RiUserSearchLine } from "react-icons/ri";
 import { GrShieldSecurity } from "react-icons/gr";
 import { BsBookmarkCheck } from "react-icons/bs";
 import Footer from "./components/Footer";
+import Testimonials from "./components/Testimonials";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -111,6 +112,9 @@ function App() {
             </p>
           </div>
         </div>
+      </div>
+      <div className='testimonials p-4'>
+        <Testimonials />
       </div>
       <Footer />
     </div>
