@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ textColor }) => {
   return (
-    <nav className='navbar text-white'>
+    <nav className={`navbar ${textColor}`}>
       <ul className='flex pl-16 items-center gap-4 md:pt-8'>
         <Link to='/' className='hover:border-b text-lg'>
           Home

@@ -13,7 +13,7 @@ function App() {
   return (
     <div className='app'>
       <div className='header'>
-        <Navbar />
+        <Navbar textColor='text-white' />
         <div className='header-description text-white p-4 text-center'>
           <h1 className='text-2xl pt-16 md:text-3xl md:pt-32'>
             Connecting Safety with Convenience - Your Trusted Source for
