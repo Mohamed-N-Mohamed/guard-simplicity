@@ -7,20 +7,22 @@ const Contact = () => {
   return (
     <div className='contact-us'>
       <Navbar textColor='text-black' />
-      <h2>National Services, Local Support</h2>
-      <p>
+      <h2 className='py-2 text-2xl text-center'>
+        National Services, Local Support
+      </h2>
+      <p className='text-center'>
         If you’d like to find out more about our services get in touch with TSS
         today!
       </p>
-      <p>
+      <p className='text-center pb-4'>
         Our dedicated customer service team is waiting for your call and will
         assist you with any queries
       </p>
 
-      <div className='form'>
-        <h3>Get in Touch</h3>
-        <div className='phone flex items-center'>
-          <AiFillPhone size={32} />
+      <div className='form border p-8'>
+        <h3 className="text-2xl">Get in Touch</h3>
+        <div className='phone flex items-center py-4'>
+          <AiFillPhone size={32} className />
           <span>02085235533</span>
         </div>
 
