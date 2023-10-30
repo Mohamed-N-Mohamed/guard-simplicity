@@ -7,11 +7,7 @@ import { BsBookmarkCheck } from "react-icons/bs";
 import Footer from "./components/Footer";
 import Testimonials from "./components/Testimonials";
 
-import securityGuards from "./guards";
-
 function App() {
-
-
   return (
     <div className='app'>
       <div className='header'>
