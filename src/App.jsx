@@ -7,8 +7,10 @@ import { BsBookmarkCheck } from "react-icons/bs";
 import Footer from "./components/Footer";
 import Testimonials from "./components/Testimonials";
 
+import securityGuards from "./guards";
+
 function App() {
-  const [count, setCount] = useState(0);
+
 
   return (
     <div className='app'>
