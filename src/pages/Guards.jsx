@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Location from "../components/Location";
 import Navbar from "../components/Navbar";
 import Search from "../components/Search";
 import Security from "../components/Security";
@@ -10,8 +11,9 @@ const Guards = () => {
   const [guards, setGuards] = useState(securityGuards);
   const [filteredGuards, setFilteredGuards] = useState([]);
   const [search, setSearch] = useState("");
+  const [selectedLoction, setSelectedLocation] = useState("All");
 
-  console.log(filteredGuards);
+  console.log(selectedLoction);
 
   useEffect(() => {
     //if there is a search term. find the person
@@ -26,6 +28,12 @@ const Guards = () => {
     }
   }, [search]);
 
+  const handleChangeLocation = (e) => {
+    const { value } = e.target;
+    console.log(value);
+    setSelectedLocation(value);
+  };
+
   return (
     <div className='guards-list p-4'>
       <Navbar />
@@ -39,7 +47,11 @@ const Guards = () => {
           <Search searchTerm={search} setSearch={setSearch} />
         </div>
 
-        <div className='security max-w-7xl mx-auto'>
+        <div className='security max-w-7xl mx-auto flex gap-8'>
+          <Location
+            changeLocation={handleChangeLocation}
+            location={selectedLoction}
+          />
           <Security guards={filteredGuards} />
         </div>
       </div>
