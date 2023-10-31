@@ -11,23 +11,54 @@ const Guards = () => {
   const [guards, setGuards] = useState(securityGuards);
   const [filteredGuards, setFilteredGuards] = useState([]);
   const [search, setSearch] = useState("");
-  const [selectedLoction, setSelectedLocation] = useState("All");
+  const [selectedLoction, setSelectedLocation] = useState("");
 
   console.log(selectedLoction);
 
   useEffect(() => {
     //if there is a search term. find the person
+
+    let filterGuardsByName = [];
+    let filterGuardsByLocation = [];
+
+    console.log(selectedLoction);
+
+    // if (search) {
+    //   filterGuardsByName = guards.filter(({ name }) =>
+    //     name.toLowerCase().includes(search.toLowerCase())
+    //   );
+    //   setFilteredGuards(filterGuardsByName);
+    // } else {
+    //   // If search is empty, reset the filtered guards to guards state
+    //   setFilteredGuards(guards);
+    // }
+
     if (search) {
-      const filterGuardsByName = guards.filter(({ name }) =>
+      filterGuardsByName = guards.filter(({ name }) =>
         name.toLowerCase().includes(search.toLowerCase())
       );
       setFilteredGuards(filterGuardsByName);
+    } else if (selectedLoction !== "") {
+      // If search is empty, reset the filtered guards to guards state
+      filterGuardsByLocation = guards.filter((item) =>
+        item.location.includes(selectedLoction)
+      );
+      setFilteredGuards(filterGuardsByLocation);
     } else {
-      // If search is empty, reset the filtered guards
       setFilteredGuards(guards);
     }
-  }, [search]);
 
+    // if (selectedLoction === "All") {
+    //   setFilteredGuards(guards);
+    // } else {
+    //   filterGuardsByLocation = guards.filter((item) =>
+    //     item.location.includes(selectedLoction)
+    //   );
+    //   setFilteredGuards(filterGuardsByLocation);
+    // }
+  }, [search, selectedLoction]);
+
+  //handle on change location and get the value
   const handleChangeLocation = (e) => {
     const { value } = e.target;
     console.log(value);

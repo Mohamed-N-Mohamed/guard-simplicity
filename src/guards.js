@@ -67,7 +67,7 @@ const securityGuards = [
     description: "Security specialist with a focus on retail loss prevention.",
     price: 19, // per hour
     skills: ["Loss Prevention", "Surveillance", "Retail Security"],
-    location: ["London", "Manchester", "Birmingham", "Glasgow"],
+    location: ["London", "Manchester"],
   },
   {
     id: 9,
