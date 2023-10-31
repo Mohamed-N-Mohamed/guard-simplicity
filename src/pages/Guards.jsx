@@ -13,49 +13,30 @@ const Guards = () => {
   const [search, setSearch] = useState("");
   const [selectedLoction, setSelectedLocation] = useState("");
 
-  console.log(selectedLoction);
-
   useEffect(() => {
-    //if there is a search term. find the person
+    //if there is a search term. find the person && if location is selected find the person with location
 
     let filterGuardsByName = [];
     let filterGuardsByLocation = [];
 
-    console.log(selectedLoction);
+    //if all is selected  set the filtered guards
 
-    // if (search) {
-    //   filterGuardsByName = guards.filter(({ name }) =>
-    //     name.toLowerCase().includes(search.toLowerCase())
-    //   );
-    //   setFilteredGuards(filterGuardsByName);
-    // } else {
-    //   // If search is empty, reset the filtered guards to guards state
-    //   setFilteredGuards(guards);
-    // }
-
-    if (search) {
+    //check if there is a search term
+    if (search || selectedLoction === "All") {
       filterGuardsByName = guards.filter(({ name }) =>
         name.toLowerCase().includes(search.toLowerCase())
       );
       setFilteredGuards(filterGuardsByName);
+      //check selected location is either london, manchester, birmingham
     } else if (selectedLoction !== "") {
-      // If search is empty, reset the filtered guards to guards state
       filterGuardsByLocation = guards.filter((item) =>
         item.location.includes(selectedLoction)
       );
       setFilteredGuards(filterGuardsByLocation);
     } else {
+      //if all cases not true set the filtered guards
       setFilteredGuards(guards);
     }
-
-    // if (selectedLoction === "All") {
-    //   setFilteredGuards(guards);
-    // } else {
-    //   filterGuardsByLocation = guards.filter((item) =>
-    //     item.location.includes(selectedLoction)
-    //   );
-    //   setFilteredGuards(filterGuardsByLocation);
-    // }
   }, [search, selectedLoction]);
 
   //handle on change location and get the value

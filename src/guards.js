@@ -6,7 +6,7 @@ const securityGuards = [
       "Ex-military with 10 years of experience. Trained in emergency response.",
     price: 25, // per hour
     skills: ["Emergency Response", "Surveillance", "Physical Fitness"],
-    location: ["London", "Manchester", "Birmingham", "Glasgow"],
+    location: ["Manchester", "Birmingham", "Glasgow"],
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const securityGuards = [
       "Security guard with a background in event security. Friendly and approachable.",
     price: 18, // per hour
     skills: ["Event Security", "Crowd Management", "Customer Service"],
-    location: ["London", "Manchester", "Birmingham", "Glasgow"],
+    location: ["Manchester", "Birmingham", "Glasgow"],
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const securityGuards = [
       "Experienced security professional with a focus on asset protection.",
     price: 28, // per hour
     skills: ["Asset Protection", "Security Planning", "Risk Assessment"],
-    location: ["London", "Manchester", "Birmingham", "Glasgow"],
+    location: ["Manchester", "Birmingham", "Glasgow"],
   },
   {
     id: 6,
@@ -75,7 +75,7 @@ const securityGuards = [
     description: "Former bodyguard with expertise in VIP protection.",
     price: 40, // per hour
     skills: ["VIP Protection", "Close Protection", "Threat Assessment"],
-    location: ["London", "Manchester", "Birmingham", "Glasgow"],
+    location: ["Manchester", "Birmingham", "Glasgow"],
   },
   {
     id: 10,
@@ -84,7 +84,7 @@ const securityGuards = [
       "Certified in K-9 security. Specializes in canine-assisted security.",
     price: 32, // per hour
     skills: ["K-9 Security", "Canine Handling", "Search and Detection"],
-    location: ["London", "Manchester", "Birmingham", "Glasgow"],
+    location: ["Manchester", "Birmingham", "Glasgow"],
   },
 ];
 
