@@ -12,12 +12,14 @@ const Guards = () => {
   const [filteredGuards, setFilteredGuards] = useState([]);
   const [search, setSearch] = useState("");
   const [selectedLoction, setSelectedLocation] = useState("");
+  const [price, setSelectedPrice] = useState("");
 
   useEffect(() => {
     //if there is a search term. find the person && if location is selected find the person with location
 
     let filterGuardsByName = [];
     let filterGuardsByLocation = [];
+    let filterGuardsByPrice = [];
 
     //if all is selected  set the filtered guards
 
@@ -37,7 +39,13 @@ const Guards = () => {
       //if all cases not true set the filtered guards
       setFilteredGuards(guards);
     }
-  }, [search, selectedLoction]);
+
+    //Not wworking
+    // if (price === "High") {
+    //   filterGuardsByPrice = filteredGuards.sort((a, b) => b.price - a.price);
+    //   setFilteredGuards(filterGuardsByPrice);
+    // }
+  }, [search, selectedLoction, price]);
 
   //handle on change location and get the value
   const handleChangeLocation = (e) => {
@@ -63,6 +71,8 @@ const Guards = () => {
           <Location
             changeLocation={handleChangeLocation}
             location={selectedLoction}
+            setSelectedPrice={setSelectedPrice}
+            price={price}
           />
           <Security guards={filteredGuards} />
         </div>

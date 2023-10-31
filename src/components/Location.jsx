@@ -1,6 +1,7 @@
 import React from "react";
+import Price from "./Price";
 
-const Location = ({ changeLocation, location }) => {
+const Location = ({ changeLocation, location, setSelectedPrice, price }) => {
   return (
     <div className='location py-8 flex flex-col gap-4'>
       <h3 className='text-lg font-bold'>Choose a Location:</h3>
@@ -68,6 +69,8 @@ const Location = ({ changeLocation, location }) => {
         />
         <span>Glasgow</span>
       </label>
+
+      <Price setSelectedPrice={setSelectedPrice} price={price} />
     </div>
   );
 };
